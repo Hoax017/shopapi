@@ -20,10 +20,13 @@ Content-Type `application/json`
 
 #### Réponse Body
 
+| Return Type       |
+|--------------------|
+| `Object[]`             |
 
 | Object Field       | Type   | 
 |--------------------|--------|
-| `id`             | string | .
+| `id`             | string |
 | `index`             | string |
 | `label`             | string | 
 | `desciption` | string |
@@ -31,10 +34,12 @@ Content-Type `application/json`
 #### Example Response:
 
 ```json
-{
-  "id": 1,
-  "index": 1,
-  "label": "Titres Unitaires",
-  "description": "Correspondances illimitées dans l'heure suivant la première validation."
-}
+[
+  {
+	"id": 1,
+	"index": 1,
+	"label": "Titres Unitaires",
+	"description": "Correspondances illimitées dans l'heure suivant la première validation."
+  }
+]
 ```
