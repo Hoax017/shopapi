@@ -103,7 +103,59 @@ Statut `201`
 
 # Categories
 
-## Get full list of categories
+## Get full list of categories with product and user restriction
+
+### Request
+
+`GET /categories`
+
+### Response Headers
+
+Statut `200`
+
+| Header Name       | Value   | 
+|--------------------|--------|
+| `Content-Type`             | `application/json` |
+
+### Response Body
+
+| Return Type       |
+|--------------------|
+| `Object[]`             |
+
+| Object Field       | Type   | 
+|--------------------|--------|
+| `id`             | integer |
+| `index`             | integer |
+| `label`             | string | 
+| `description` | string |
+| `products` | Object[] |
+
+#### Example Response:
+
+```json
+[
+  {
+	"id": 1,
+	"index": 1,
+	"label": "Titres Unitaires",
+	"description": "Correspondances illimitées dans l'heure suivant la première validation.",
+	"products": [
+	  {
+		"id": 8,
+		"label": "Carnet 10 x Ticket Parking+Transport",
+		"description": "Carnet de 10 titre permettant de se garer dans l'un de nos 48 parkings réservés, ainsi que de faire l'aller-retour sur notre réseau de transport.\nValable pour tous les passagers de la voiture (jusqu'à 9)",
+		"price": 3000,
+		"category_id": 2,
+		"thumbnail_url": null,
+		"visible_public": false,
+		"visible_authenticated": true
+	  }
+	]
+  }
+]
+```
+## Get full list of categories with product
 
 ### Request
 
@@ -158,7 +210,7 @@ Statut `200`
 
 # Products
 
-## Get full list of products
+## Get list of products with user restriction
 
 ### Request
 
