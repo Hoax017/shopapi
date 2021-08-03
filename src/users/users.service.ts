@@ -16,6 +16,10 @@ export class UsersService {
     return await this.repository.findOne({ where: { email: email } });
   }
 
+  async findById(id: number): Promise<User> {
+    return await this.repository.findOne({ where: { id: id } });
+  }
+
   hashPassword(userId: number, password: string): string {
     function md5(s: string): string {
       return createHash('md5').update(s).digest('hex');

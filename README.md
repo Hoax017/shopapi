@@ -259,3 +259,128 @@ Statut `200`
   }
 ]
 ```
+
+# Basket
+
+## Get basket of currrent user
+
+### Request
+
+`GET /baskets`
+
+### Request Headers
+
+| Header Name       | Value   | 
+|--------------------|--------|
+| `user-token`             | token given from authentication |
+
+### Response Headers
+
+Statut `200`
+
+| Header Name       | Value   | 
+|--------------------|--------|
+| `Content-Type`             | `application/json` |
+
+### Response Body
+
+| Return Type       |
+|--------------------|
+| `Object`             |
+
+| Object Field       | Type   | 
+|--------------------|--------|
+| `userId`             | integer |
+| `products`             | object[] |
+
+#### Example Response:
+
+```json
+{
+  "userId": 2,
+  "quantities": { "1": 5, "2": 1},
+  "products": [
+	{
+	  "id": 1,
+	  "label": "Titre Unitaire",
+	  "description": "Titre permettant de voyager sur l'ensemble du réseau.\nCorrespondances illimitées dans l'heure suivant la première validation.",
+	  "price": 150,
+	  "category_id": 1,
+	  "thumbnail_url": "https://picsum.photos/256/256",
+	  "visible_public": true,
+	  "visible_authenticated": false
+	}
+  ]
+}
+```
+
+## Add product to basket
+
+### Request
+
+`Patch /baskets/add`
+
+### Request Headers
+
+| Header Name       | Value   | 
+|--------------------|--------|
+| `user-token`             | token given from authentication |
+
+### Request Body
+
+| Return Type       |
+|--------------------|
+| `Object`             |
+
+| Object Field       | Type   | 
+|--------------------|--------|
+| `userId`             | integer |
+| `productId`             | integer |
+#### Example Request:
+
+```json
+{
+  "userId": 2,
+  "productId": 2
+}
+```
+### Response Headers
+
+Statut `200`
+
+| Header Name       | Value   | 
+|--------------------|--------|
+| `Content-Type`             | `application/json` |
+
+### Response Body
+
+| Return Type       |
+|--------------------|
+| `Object`             |
+
+| Object Field       | Type   | 
+|--------------------|--------|
+| `userId`             | integer |
+| `quantities`             | object {[ProductId: number]: Amount: number} |
+| `products`             | object[] |
+
+#### Example Response:
+
+```json
+{
+  "userId": 2,
+  "quantities": { "1": 5, "2": 1},
+  "products": [
+	{
+	  "id": 1,
+	  "label": "Titre Unitaire",
+	  "description": "Titre permettant de voyager sur l'ensemble du réseau.\nCorrespondances illimitées dans l'heure suivant la première validation.",
+	  "price": 150,
+	  "category_id": 1,
+	  "thumbnail_url": "https://picsum.photos/256/256",
+	  "visible_public": true,
+	  "visible_authenticated": false
+	}
+  ]
+}
+```

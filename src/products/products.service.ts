@@ -25,4 +25,7 @@ export class ProductsService {
     return await this.repository.find({ where });
   }
 
+  async find(id: number) {
+    return await this.repository.findOne(id);
+  }
 }
