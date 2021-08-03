@@ -370,7 +370,7 @@ Statut `200`
 
 ### Request
 
-`Patch /baskets/add`
+`Put /baskets/add`
 
 ### Request Headers
 
