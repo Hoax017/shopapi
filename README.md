@@ -361,6 +361,16 @@ Statut `200`
 	  "thumbnail_url": "https://picsum.photos/256/256",
 	  "visible_public": true,
 	  "visible_authenticated": false
+	},
+	{
+	  "id": 2,
+	  "label": "Titre Unitaire",
+	  "description": "Titre permettant de voyager sur l'ensemble du réseau.\nCorrespondances illimitées dans l'heure suivant la première validation.",
+	  "price": 150,
+	  "category_id": 1,
+	  "thumbnail_url": "https://picsum.photos/256/256",
+	  "visible_public": true,
+	  "visible_authenticated": false
 	}
   ]
 }
@@ -425,6 +435,16 @@ Statut `200`
   "products": [
 	{
 	  "id": 1,
+	  "label": "Titre Unitaire",
+	  "description": "Titre permettant de voyager sur l'ensemble du réseau.\nCorrespondances illimitées dans l'heure suivant la première validation.",
+	  "price": 150,
+	  "category_id": 1,
+	  "thumbnail_url": "https://picsum.photos/256/256",
+	  "visible_public": true,
+	  "visible_authenticated": false
+	},
+	{
+	  "id": 2,
 	  "label": "Titre Unitaire",
 	  "description": "Titre permettant de voyager sur l'ensemble du réseau.\nCorrespondances illimitées dans l'heure suivant la première validation.",
 	  "price": 150,
